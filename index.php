@@ -101,16 +101,35 @@
         <table class="ls-table">
   <thead>
     <tr>
-      <th>Título</th>
-      <th class="hidden-xs">Campanha</th>
+      <th>Descrição</th>
+      <th class="hidden-xs">Valor</th>
+      <th class="hidden-xs">Tipo</th>
       <th>Status</th>
       <th class="hidden-xs">Data de envio</th>
+
     </tr>
   </thead>
   <tbody>
     <tr>
       
       <div data-ls-module="progressBar" role="progressbar" aria-valuenow="60"></div>
+
+      <table class="ls-table ls-no-hover ls-table-striped">
+  
+  <tbody>
+    <tr>
+      <td><a href="" title="">Renda Variavel</a></td>
+      <td class="hidden-xs">1.500</td>
+      <td>Receita</td>
+      <td>Recebido</td>
+      <td class="hidden-xs">21/09/2021 as 20:00 PM</td>
+    </tr>
+
+
+
+
+  </tbody>
+</table>
 
 
 
