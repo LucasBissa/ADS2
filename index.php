@@ -92,7 +92,7 @@ include_once("database.php");
             $valor = $linha['value'];
             $paymentType = $linha['paymentType'];
             $status = $linha['status'] === "paid" ? "pago" : "não pago";
-            $data = $linha['transaction_date'];
+            $data = date('d/m/Y',strtotime($linha['transaction_date']));
 
             echo "
             <tr>
