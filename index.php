@@ -79,12 +79,18 @@ include_once("database.php");
 
           <?php
           $obj = new Database;
-          $resultado = $obj->connect("select transaction.*, transaction_type.description as type from transaction inner join transaction_type on transaction.transaction_type_id = transaction_type.id");
+          $resultado = $obj->connect(
+          "select transaction.*, transaction_type.description as transactionType, payment_type.description as paymentType
+          from
+          transaction inner join transaction_type on transaction.transaction_type_id = transaction_type.id
+          inner join payment_type on transaction.payment_type_id = payment_type.id"
+          );
 
           while ($linha = mysqli_fetch_array($resultado)) {
-            $tipo = $linha['type'];
+            $tipo = $linha['transactionType'];
             $descricao = $linha['description'];
             $valor = $linha['value'];
+            $paymentType = $linha['paymentType'];
             $status = $linha['status'] === "paid" ? "pago" : "não pago";
             $data = $linha['transaction_date'];
 
@@ -93,7 +99,7 @@ include_once("database.php");
             <td>$descricao</td>
             <td>R$ $valor</td>
             <td>$tipo</td>
-            <td>forma de pagamento</td>
+            <td>$paymentType</td>
             <td>$status</td>
             <td>$data</td>
             </tr>";
