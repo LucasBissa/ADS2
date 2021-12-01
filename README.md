@@ -5,7 +5,9 @@ Integrantes:
 - Patrick Dias
 - José Claudino
 
-### para criar o banco de dados basta rodar os scripts disponíveís em create-transaction.txt e create-user.txt
+### Para criar o banco de dados basta rodar os scripts disponíveís em create-transaction.txt e create-user.txt
+
+### E para popular o banco, utilizar o script disponível em insert.txt
 
 ## para startar a aplicação:
 ```bash
