@@ -19,7 +19,7 @@
     <span class="ls-show-sidebar ls-ico-menu"></span>
 
     <h1 class="ls-brand-name">
-      <a href="" class="ls-ico-earth">
+      <a href="index.php" class="ls-ico-earth">
         <small>Minha Finança</small>
         Financeiro
       </a>
