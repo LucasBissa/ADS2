@@ -14,12 +14,15 @@
         </thead>
         <tbody>
           <?php
+          date_default_timezone_set('America/Sao_Paulo');
           $obj = new Database;
           $resultado = $obj->connect(
           "select transaction.*, transaction_type.description as transactionType, payment_type.description as paymentType
           from
           transaction inner join transaction_type on transaction.transaction_type_id = transaction_type.id
-          inner join payment_type on transaction.payment_type_id = payment_type.id"
+          inner join payment_type on transaction.payment_type_id = payment_type.id
+          order by transaction.transaction_date desc
+          limit 100"
           );
 
           while ($linha = mysqli_fetch_array($resultado)) {
