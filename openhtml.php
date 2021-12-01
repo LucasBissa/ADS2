@@ -16,4 +16,5 @@
   <link href="http://assets.locaweb.com.br/locastyle/3.10.1/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
   <link rel="icon" sizes="192x192" href="/locawebstyle/assets/images/ico-boilerplate.png">
   <link rel="apple-touch-icon" href="/locawebstyle/assets/images/ico-boilerplate.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" >
 </head>
