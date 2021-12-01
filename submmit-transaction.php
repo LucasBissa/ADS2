@@ -29,8 +29,9 @@ if($empty) {
   
   $obj = new Database;
   $resultado = $obj->connect($sql);
-  var_dump($resultado);
-  $message = 'cadastrado com sucesso';
+  
+  $message = $resultado ? 'cadastrado com sucesso' : 'Algo deu errado!';
+  $type = $resultado ? "success" : "danger";
   $_SESSION['flash'] = '<div class="alert alert-'.$type. '" >'. $message . '</div>';
   header("Location: http://localhost:8000/create.php");
 }
