@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS `usuario` (
+
+  `COD_Usuario` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `cpf` varchar(255) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `login` varchar(255) NOT NULL,
+  `senha` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `perfil` int(11) NOT NULL,
+  `cont_acesso` int(10) DEFAULT 0,
+  `path_avatar` varchar(1024) DEFAULT 'img\\avatar.png',
+  `ultimo_acesso` varchar(255) DEFAULT 'Nunca Acessou',
+  `informacoes` varchar(1024) DEFAULT 'Sem Informações',
+  PRIMARY KEY (`COD_Usuario`),
+  UNIQUE KEY `ConstraintUnicos` (`cpf`,`login`,`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `usuario` (`COD_Usuario`, `cpf`, `nome`, `login`, `senha`, `email`, `perfil`, `cont_acesso`, `path_avatar`, `ultimo_acesso`, `informacoes`) VALUES
+
+(1, '03040222686', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com', 1, 29, 'img\\avatar.png', '15/09/2021 - 19:10:41', 'admin1'),
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
